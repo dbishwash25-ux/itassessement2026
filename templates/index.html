@@ -33,9 +33,9 @@
 <section class="hero">
   <div class="hero-slider">
 
-    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1596495577886-d920f1fb7238');"></div>
+    <div class="slide active" style="background-image:url('/images/slider_1.png') "></div>
     <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5');"></div>
-    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b');"></div>
+    <div class="slide" style="background-image: url('/images/slider_2.jpeg');"></div>
     <div class="slide" style="background-image: url('https://images.trvl-media.com/lodging/93000000/92570000/92561600/92561581/59c4ec4d.jpg?impolicy=fcrop&w=1200&h=800&quality=medium');"></div>
 
 
@@ -104,27 +104,8 @@
     <p>📍Location: Anamnagar • 📞 Contact: +977 976-5627794</p>
   </footer>
 
-<script>
-  const toggle = document.getElementById("themeToggle");
-  const body = document.body;
-
-  // Load saved theme on page load
-  const savedTheme = localStorage.getItem("theme") || "dark";
-  body.classList.add(savedTheme);
-  toggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
-
-  toggle.addEventListener("click", () => {
-    body.classList.toggle("dark");
-    body.classList.toggle("light");
-
-    const currentTheme = body.classList.contains("dark") ? "dark" : "light";
-    localStorage.setItem("theme", currentTheme);
-
-    toggle.textContent = currentTheme === "dark" ? "☀️" : "🌙";
-  });
-</script>
-
-<script src="/slider.js" defer></script>
+<script src="/dynamic/toggle_mode.js" defer></script>
+<script src="/dynamic/slider.js" defer></script>
 
 </body>
 </html>
