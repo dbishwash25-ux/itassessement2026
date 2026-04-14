@@ -1,0 +1,195 @@
+:root {
+  --bg-light: #ffffff;
+  --text-light: #1a1a1a;
+  --bg-dark: #0b0f14;
+  --text-dark: #eaeaea;
+  --accent: #1e90ff;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* BODY THEMES */
+body.light {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* LOGO */
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: inherit;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.navbar nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.navbar button {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* HEADER */
+.page-header {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('/images/hostel_photos/img.jpg') center/cover no-repeat;
+  position: relative;
+}
+
+.page-header-overlay {
+  background: rgba(87, 86, 86, 0.5);
+  padding: 2rem;
+  border-radius: 20px;
+  color: aliceblue;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* SECTIONS */
+.section {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(75, 56, 56, 0.2);
+}
+
+/* TABLE CELLS */
+.info-table th,
+.info-table td {
+  padding: 18px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* LEFT COLUMN */
+.info-table th {
+  width: 25%;
+  font-weight: 600;
+  background: rgba(30, 144, 255, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+/* RIGHT COLUMN */
+.info-table td {
+  background: rgba(255, 255, 255, 0.05);
+  line-height: 1.6;
+}
+
+/* ROW BORDER */
+.info-table tr {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* HOVER EFFECT */
+.info-table tr:hover {
+  background: rgba(255,255,255,0.03);
+  transition: 0.3s ease;
+}
+
+/* LIGHT MODE FIX */
+body.light .info-table td {
+  background: rgba(0,0,0,0.05);
+}
+
+body.light .info-table th {
+  background: rgba(30, 144, 255, 0.15);
+}
+
+body.light .info-table tr {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* OWNER SECTION */
+.owner-card {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+}
+
+body.light .owner-card {
+  background: rgba(0,0,0,0.05);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  background: #0f172a;
+  color: aliceblue;
+}
+
+@media (max-width: 768px) {
+  .info-table th,
+  .info-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .info-table th {
+    margin-top: 10px;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+}

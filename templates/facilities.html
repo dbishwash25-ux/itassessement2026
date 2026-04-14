@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/images/logo/image-removebg-preview.png" type="image/png">
+  <title>8/11 BOYS HOSTEL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles/facilities.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+        <img src="/images/logo/image-removebg-preview.png" alt="Hostel Logo" class="logo-img">
+        <span>8 eleven Boys Hostel</span>
+    </div>
+    <nav>
+      <a href="/templates/index.html">Home</a>
+      <a href="/templates/facilities.html">Facilities</a>
+      <a href="/templates/about.html">About Us</a>
+      <a href="/templates/contact.html">Contact</a>
+      <a href="/templates/gallery.html">Gallery</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </header>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <div class ="page-header-overlay">
+    <h1>Welcome to 8 Eleven Hostel</h1>
+    <p class="tagline">
+      In a hostel, you don’t just share a room — you share stories, laughter, and memories.
+    </p>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="section">
+    <p>
+      We are excited to announce our new hostel: <strong>8 Eleven Hostel Pvt. Ltd.</strong><br>
+      A place designed for comfort, safety, and a vibrant student life.
+    </p>
+
+    <p class="highlight">
+      📢 Book Your Seat ASAP — Limited spots available!
+    </p>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section">
+    <h2>Benefits of Joining 8 Eleven Hostel</h2>
+
+    <ul class="benefits">
+      <li>🍽️ Healthy and delicious food (menu attached with post)</li>
+      <li>🚿 24 hours hot & cold water</li>
+      <li>💧 Highly purified drinking water</li>
+      <li>🚻 3 washrooms on every floor for convenience</li>
+    </ul>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="section">
+    <h2>📍 Location</h2>
+    <p><strong>Ghatekulo Chowk, Anamnagar</strong></p>
+
+    <ul class="location">
+      <li>10 mins from NAME & Vibrant</li>
+      <li>15 mins from KMC, Bagbazar</li>
+      <li>10 mins from Trinity International College</li>
+      <li>15 mins from Bagbazar & Putalisadak</li>
+      <li>10 mins from Softwarica College</li>
+      <li>20 mins from New Baneshwor</li>
+      <li>20 mins from Global College</li>
+      <li>10 mins from Singha Durbar</li>
+    </ul>
+  </section>
+
+  <section class="section">
+  <h2>📍 Our Location</h2>
+  <p>Find us easily! Here’s our hostel on the map:</p>
+
+  <!-- MAP -->
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.946599709844!2d85.33025397582496!3d27.69971697618694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19004315def3%3A0x95c765ce75229543!2s8%20eleven%20boys%20hostel!5e1!3m2!1sen!2snp!4v1770400315946!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 • 8 Eleven Hostel Pvt. Ltd.</p>
+  </footer>
+
+<script>
+  const toggle = document.getElementById("themeToggle");
+  const body = document.body;
+
+  // Load saved theme on page load
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  body.classList.add(savedTheme);
+  toggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    body.classList.toggle("light");
+
+    const currentTheme = body.classList.contains("dark") ? "dark" : "light";
+    localStorage.setItem("theme", currentTheme);
+
+    toggle.textContent = currentTheme === "dark" ? "☀️" : "🌙";
+  });
+</script>
+
+  </body>
+  </html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/images/logo/image-removebg-preview.png" type="image/png">
+  <title>8/11 BOYS HOSTEL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+        <img src="/images/logo/image-removebg-preview.png" alt="Hostel Logo" class="logo-img">
+        <span>8 eleven Boys Hostel</span>
+    </div>
+    <nav>
+      <a href="/templates/index.html">Home</a>
+      <a href="/templates/facilities.html">Facilities</a>
+      <a href="/templates/about.html">About Us</a>
+      <a href="/templates/contact.html">Contact</a>
+      <a href="/templates/gallery.html">Gallery</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </header>
+
+ <!-- HERO SLIDER -->
+<section class="hero">
+  <div class="hero-slider">
+
+    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1596495577886-d920f1fb7238');"></div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5');"></div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b');"></div>
+    <div class="slide" style="background-image: url('https://images.trvl-media.com/lodging/93000000/92570000/92561600/92561581/59c4ec4d.jpg?impolicy=fcrop&w=1200&h=800&quality=medium');"></div>
+
+
+    <!-- Controls -->
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+
+  </div>
+</section>
+ 
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="card">🛏️ Spacious Rooms</div>
+    <div class="card">🔒 24/7 Security</div>
+    <div class="card">🍽️ Hygienic Food</div>
+    <div class="card">📶 High-Speed Wi-Fi</div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <h2>Welcome to Our Boys Hostel</h2>
+    <p>
+      Our hostel provides a safe, disciplined, and peaceful living environment
+      for students. We focus on hygiene, comfort, and a study-friendly atmosphere
+      so students can grow without distractions.
+    </p>
+  </section>
+
+  <pre>
+    <div class="card-o2"><a href="/templates/about.html">click here to know more about us </a> </div>
+  </pre>
+
+  <!-- IMAGE GALLERY -->
+<section class="gallery">
+  <h2>Life at Our Hostel</h2>
+
+  <div class="gallery-wrapper">
+    <div class="gallery-track">
+      <img src="/images/hostel_photos/img.jpg" alt="">
+      <img src="/images/hostel_photos/img1.jpg" alt="">
+      <img src="/images/hostel_photos/img2.jpg" alt="">
+      <img src="/images/hostel_photos/img3.jpg" alt="">
+      <img src="/images/hostel_photos/img4.jpg" alt="">
+      <img src="/images/hostel_photos/img5.jpg" alt="">
+      <img src="/images/hostel_photos/img6.jpg" alt="">
+      <img src="/images/hostel_photos/img7.jpg" alt="">
+
+
+      <!-- duplicate for smooth loop -->
+      <img src="/images/hostel_photos/img.jpg" alt="">
+      <img src="/images/hostel_photos/img1.jpg" alt="">
+      <img src="/images/hostel_photos/img2.jpg" alt="">
+      <img src="/images/hostel_photos/img3.jpg" alt="">
+      <img src="/images/hostel_photos/img4.jpg" alt="">
+      <img src="/images/hostel_photos/img5.jpg" alt="">
+      <img src="/images/hostel_photos/img6.jpg" alt="">
+      <img src="/images/hostel_photos/img7.jpg" alt="">
+
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 | 8 eleven Boys Hostel • All Rights Reserved</p>
+    <p>📍Location: Anamnagar • 📞 Contact: +977 976-5627794</p>
+  </footer>
+
+<script>
+  const toggle = document.getElementById("themeToggle");
+  const body = document.body;
+
+  // Load saved theme on page load
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  body.classList.add(savedTheme);
+  toggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    body.classList.toggle("light");
+
+    const currentTheme = body.classList.contains("dark") ? "dark" : "light";
+    localStorage.setItem("theme", currentTheme);
+
+    toggle.textContent = currentTheme === "dark" ? "☀️" : "🌙";
+  });
+</script>
+
+<script src="/slider.js" defer></script>
+
+</body>
+</html>

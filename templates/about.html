@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <link rel="icon" href="/images/logo/image-removebg-preview.png" type="image/png">
+  <title>8/11 BOYS HOSTEL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles/style1.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+        <img src="/images/logo/image-removebg-preview.png" alt="Hostel Logo" class="logo-img">
+        <span>8 eleven Boys Hostel</span>
+    </div>
+    <nav>
+      <a href="/templates/index.html">Home</a>
+      <a href="/templates/facilities.html">Facilities</a>
+      <a href="/templates/about.html">About Us</a>
+      <a href="/templates/contact.html">Contact</a>
+      <a href="/templates/gallery.html">Gallery</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </header>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <div class="page-header-overlay">
+    <h1>Welcome to 8 Eleven Hostel</h1>
+    <p class="tagline">
+      In a hostel, you don’t just share a room — you share stories, laughter, and memories.
+    </p>
+    </div>
+  </header>
+
+<section class="section">
+  <h2>📋 Hostel Overview</h2>
+
+  <table class="info-table">
+    <tr>
+      <th>🏠 Our Story</th>
+      <td>
+        8 Eleven Hostel Pvt. Ltd. was created with one simple vision — to provide students with a safe, comfortable, and friendly place they can truly call home.<br><br>
+        We believe a hostel is more than just a room. It is a community where friendships are built, goals are chased, and memories are made.
+      </td>
+    </tr>
+
+    <tr>
+      <th>🤝 Our Commitment</th>
+      <td>
+        ✅ Safety and discipline as top priority<br>
+        ✅ Clean, hygienic, and peaceful environment<br>
+        ✅ Respectful and supportive management<br>
+        ✅ Student-focused living experience
+      </td>
+    </tr>
+
+    <tr>
+      <th>⭐ Why Choose Us?</th>
+      <td>
+        Located in the heart of Anamnagar, 8 Eleven Hostel offers unmatched accessibility to major colleges, transportation, and daily essentials.<br><br>
+        Our goal is simple — remove living worries so students can focus on their education and personal growth.
+      </td>
+    </tr>
+  </table>
+</section> 
+
+<!-- OWNER SECTION -->
+<section class="section owner">
+  <h2>👤 Hostel Owner & Contact</h2>
+
+  <p>
+    For bookings, inquiries, or any assistance, feel free to contact the hostel owner directly.
+  </p>
+
+  <div class="owner-card">
+    <!--<p><strong>Name:</strong> Mr. [Owner Name]</p>-->
+    <p><strong>Phone:</strong> 📞 <a href="tel:+9779822368866">+977-9822368866</a></p>
+    <!-- <p><strong>Email:</strong> 📧 <a href="mailto:info@8elevenhostel.com">info@8elevenhostel.com</a></p> -->
+    <p><strong>Available:</strong> 7:00 AM – 9:00 PM</p>
+  </div>
+
+</section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 • 8 Eleven Hostel Pvt. Ltd.</p>
+  </footer>
+
+<script>
+  const toggle = document.getElementById("themeToggle");
+  const body = document.body;
+
+  // Load saved theme on page load
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  body.classList.add(savedTheme);
+  toggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    body.classList.toggle("light");
+
+    const currentTheme = body.classList.contains("dark") ? "dark" : "light";
+    localStorage.setItem("theme", currentTheme);
+
+    toggle.textContent = currentTheme === "dark" ? "☀️" : "🌙";
+  });
+</script>
+
+  </body>
+  </html>
