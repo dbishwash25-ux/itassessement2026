@@ -164,13 +164,22 @@ body.light .info-table tr {
   background: rgba(255,255,255,0.05);
 }
 
-a {
+body.dark a {
   text-decoration: none;
-  color: whitesmoke;
+  color: Or var(--text-dark);
 }
 
-a:hover {
-  color: aqua;
+body.light a {
+  text-decoration: none;
+  color: var(--text-light);
+}
+
+body.dark a:hover {
+  color: var(--accent)
+}
+
+body.light a:hover {
+  color: var(--accent)
 }
 
 body.light .owner-card {
