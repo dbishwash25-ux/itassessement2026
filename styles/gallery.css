@@ -4,6 +4,7 @@
   --bg-dark: #0b0f14;
   --text-dark: #eaeaea;
   --accent: #1e90ff;
+  overflow-x: hidden;
 }
 
 * {
@@ -36,7 +37,6 @@ body.dark {
   gap: 8px;
 }
 
-
 /* NAVBAR */
 .navbar {
   display: flex;
@@ -64,7 +64,6 @@ body.dark {
   cursor: pointer;
 }
 
-
 /* GALLERY SECTION */
 .gallery-section {
   padding: 4rem 2rem;
@@ -79,11 +78,11 @@ body.dark {
 /* GRID */
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(4, 390px);
-  margin-left: 30px;
+  grid-template-columns: repeat(4, 350px);
+  margin-left: 40px;
   margin-top: 60px;
-  gap: 70px;
-  padding: 10px;
+  gap: 50px;
+  padding: 5px;
 }
 
 /* ITEM */
