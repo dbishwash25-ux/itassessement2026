@@ -21,6 +21,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.width-control {
+  max-width: 1320px;
+  min-width: 960px;
+  margin: auto;
+}
+
 body.light {
   background: var(--bg-light);
   color: var(--text-light);
